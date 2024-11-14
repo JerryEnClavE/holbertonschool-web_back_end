@@ -1,4 +1,5 @@
 module.exports = {
+  root: true, // Para evitar la carga accidental de configuraciones globales
   env: {
     browser: false,
     es6: true,
@@ -27,12 +28,12 @@ module.exports = {
       'LabeledStatement',
       'WithStatement',
     ],
+    'indent': ['error', 2], // Esta regla asegura que la indentación sea de 2 espacios
   },
-  overrides:[
+  overrides: [
     {
       files: ['*.js'],
       excludedFiles: 'babel.config.js',
-    }
-  ]
+    },
+  ],
 };
-
