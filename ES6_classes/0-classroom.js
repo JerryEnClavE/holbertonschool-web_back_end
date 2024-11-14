@@ -7,5 +7,3 @@ constructor(maxStudentsSize){
  
  }
 }
-
-module.exports = classRoom;
