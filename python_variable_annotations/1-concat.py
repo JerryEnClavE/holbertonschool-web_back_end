@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 def concat(a: str, b: str) -> str:
-    
+
     """
     Concatenates two strings.
 
@@ -11,5 +11,7 @@ def concat(a: str, b: str) -> str:
     Returns:
     str: The concatenated result of a and b.
     """
-    
-    return a + b
+
+    def new_func(a, b):
+
+        return a + b
