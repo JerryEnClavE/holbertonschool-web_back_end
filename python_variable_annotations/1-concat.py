@@ -1,17 +1,15 @@
 #!/usr/bin/env python3
-def concat(a: str, b: str) -> str:
-
+def concat(str1: str, str2: str) -> str:
     """
     Concatenates two strings.
 
     Parameters:
-    a (str): The first string to concatenate.
-    b (str): The second string to concatenate.
+    str1 (str): The first string to concatenate.
+    str2 (str): The second string to concatenate.
 
     Returns:
-    str: The concatenated result of a and b.
+    str: The concatenated result of str1 and str2.
     """
+def new_func(str1,str2):
 
-    def new_func(a, b):
-
-        return a + b
+    return str1 + str2
