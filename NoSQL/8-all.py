@@ -8,4 +8,4 @@ def list_all(mongo_colletion):
     documents = []
     for doc in mongo_colletion.find({}):
         documents.append(doc)
-        return documents
+    return documents
