@@ -8,25 +8,25 @@ const DATABASE = args[0];
 const hostname = '127.0.0.1';
 const port = 1245;
 
-const app = http.createServer(async (req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
+const app = http.createServer(async (request, response) => {
+  response.statusCode = 200;
+  response.setHeader('Content-Type', 'text/plain');
 
-  const { url } = req;
+  const { url } = request;
 
   if (url === '/') {
-    res.write('Hello Holberton School!');
+    response.write('Hello Holberton School!');
   } else if (url === '/students') {
-    res.write('This is the list of our students\n');
+    response.write('This is the list of our students\n');
     try {
       const students = await countStudents(DATABASE);
-      res.end(`${students.join('\n')}`);
+      response.end(`${students.join('\n')}`);
     } catch (error) {
-      res.end(error.message);
+      response.end(error.message);
     }
   }
-  res.statusCode = 404;
-  res.end();
+  response.statusCode = 404;
+  response.end();
 });
 
 app.listen(port, hostname, () => {
